@@ -13,7 +13,8 @@ data class PopupProps(
     val message: String? = null,
     val messageSize: Float = DEFAULT_MESSAGE_SIZE,
     val messageColor: String = DEFAULT_MESSAGE_COLOR,
-    val media: Media? = null
+    val media: Media? = null,
+    val tag: String = DEFAULT_TAG
 ) {
     @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
@@ -46,6 +47,7 @@ data class PopupProps(
         const val DEFAULT_MESSAGE_SIZE = 12f
         const val DEFAULT_MESSAGE_COLOR = "#ffffff"
         const val DEFAULT_MEDIA_WIDTH = 480
+        const val DEFAULT_TAG = "default"
 
         val DEFAULT_POSITION: Position = Position.TopRight
     }
